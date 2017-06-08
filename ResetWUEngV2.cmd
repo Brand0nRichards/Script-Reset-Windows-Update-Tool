@@ -2,7 +2,9 @@
 :: NAME:	Reset Windows Update Tool.
 :: DESCRIPTION:	This script reset the Windows Update Components.
 :: AUTHOR:	Manuel Gil.
+:: EDITED BY:	Brandon Richards
 :: VERSION:	10.5.3.2
+:: NOTES: Thanks Manuel, I've edited this for use at work.
 :: ==================================================================================
 
 
