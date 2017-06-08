@@ -227,7 +227,7 @@ goto :eof
 	echo.
 	echo.Press any key to continue . . .
 	pause>nul
-	
+
 	goto menu
 goto :eof
 :: /*************************************************************************************/
@@ -239,10 +239,10 @@ goto :eof
 :menu
 	call :print This tool reset the Windows Update Components.
 
-	echo.    1. Open the system protection.
+	echo.    1. Open the system protection. - #Get rid#
 	echo.    2. Reset Windows Update Components.
 	echo.    3. Delete temporary files in Windows.
-	echo.    4. Open the Internet Explorer options.
+	echo.    4. Open the Internet Explorer options. #Get Rid#
 	echo.    5. Scans all protected system files.
 	echo.    6. Scan the image to check for corruption.
 	echo.    7. Check the detected corruptions.
@@ -251,15 +251,15 @@ goto :eof
 	echo.    10. Change invalid values in the Registry.
 	echo.    11. Reset the Winsock settings.
 	echo.    12. Search updates.
-	echo.    13. Explore other local solutions.
-	echo.    14. Explore other online solutions.
-	echo.    15. Download Diagnostic.
-	echo.    16. Restart your PC.
+	echo.    13. Explore other local solutions. #Get Rid#
+	echo.    14. Explore other online solutions. #Get Rid#
+	echo.    15. Download Diagnostic. #Get Rid#
+	echo.    16. Restart your PC. #Get Rid#
 	echo.
 	echo.                                            ?. Help.    0. Close.
 	echo.
 
-	set /p option=Select an option: 
+	set /p option=Select an option:
 
 	if %option% EQU 0 (
 		goto close
@@ -304,9 +304,9 @@ goto :eof
 		echo.Press any key to continue . . .
 		pause>nul
 	)
-	
+
 	goto menu
-goto :eof	
+goto :eof
 :: /*************************************************************************************/
 
 
@@ -747,7 +747,7 @@ goto :eof
 	reg delete "HKLM\COMPONENTS\NextQueueEntryIndex" /f
 	reg delete "HKLM\COMPONENTS\AdvancedInstallersNeedResolving" /f
 	reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired" /f
-	
+
 	:: ----- Add keys in the Registry -----
 	call :print Adding values in the Registry.
 
@@ -945,7 +945,7 @@ goto :eof
 	echo.                                                        0. Back.
 	echo.
 
-	set /p option=Select an option: 
+	set /p option=Select an option:
 
 	if %option% EQU 0 (
 		goto menu
@@ -966,7 +966,7 @@ goto :eof
 		echo.Press any key to continue . . .
 		pause>nul
 	)
- 
+
 	goto diagnostic
 goto :eof
 :: /*************************************************************************************/
@@ -979,4 +979,3 @@ goto :eof
 	exit
 goto :eof
 :: /*************************************************************************************/
-
